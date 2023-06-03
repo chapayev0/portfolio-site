@@ -442,6 +442,70 @@ span{
 
 }
 
+.personal-content{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 10rem;
+}
+.personal-box{
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    
+
+
+}
+
+.personal-box i{
+
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border: .2rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: var(--main-color);
+    margin: 1rem 1rem 1rem 0;
+    transition: .5s ease;
+
+
+}
+
+.personal-box h2{
+
+
+    color: var(--text-color);
+    font-size: 2.2rem;
+
+}
+.header .left-nav{
+    color: #0ef;
+}
+.call{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border: .2rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: var(--main-color);
+    margin: 3rem 1.5rem 3rem 2rem;
+    transition: .5s ease;
+}
+
+  
+
 
 /* Styles for small screens */
 @media screen and (max-width: 768px) {

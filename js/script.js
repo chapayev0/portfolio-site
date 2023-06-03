@@ -59,12 +59,12 @@ window.addEventListener('DOMContentLoaded', function() {
 
 ScrollReveal().reveal('.home-content, .heading', { origin:'top' });
 ScrollReveal().reveal('.home-img, .service-container, .protfolio-box, .contact form', { origin:'bottom' });
-ScrollReveal().reveal('.home-content h1, .about-img', { origin:'left' });
+ScrollReveal().reveal('.home-content h1, .about-img, .personal-content', { origin:'left' });
 ScrollReveal().reveal('.home-content p, .about-content', { origin:'right' });
     
 const typed = new Typed('.multiple-text',{
 
-    strings:['Fullstack Developer', 'AI Model Trainer', 'Graphic Designer'],
+    strings:['Fullstack Developer', 'Web Designer', 'Graphic Designer'],
     typeSpeed:100,
     backSpeed:100,
     backDelay:1000,
