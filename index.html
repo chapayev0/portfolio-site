@@ -8,8 +8,11 @@
     <title>Dilhara MMS Portpolio</title>
 
     <link rel="stylesheet" , href="css/style.css">
+  
+    
     <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
@@ -36,6 +39,9 @@
 </header>
 
 <body>
+
+    <!-- home goes here -->
+
     <section class="home" , id="home">
 
         <div class="home-content">
@@ -80,6 +86,8 @@
         </div>
 
     </section>
+
+    <!-- service goes here -->
 
     <section class="service" id="service">
         <h2 class="heading" style="margin-bottom: 5rem;">Our <span>Service</span></h2>
@@ -127,6 +135,8 @@
 
 
     </section>
+
+    <!-- portfolio goes here -->
 
     <section class="portfolio" id="portfolio">
         <h2 class="heading">
@@ -196,27 +206,118 @@
             </div>
         </div>
     </section>
+
+    <!-- feedback goes here -->
+
+
+    <section class="feed-back" id="feed-back">
+
+        <div class="carousel">
+                    <div class="owl-corousel">
+                        <div class="box-area">
+                            <div class="img-area">
+                                <img src="assest/feedback_img/manjula.jpg" alt="">
+                            </div>
+                            <h3>Dinusha Gayan Manjula</h3>
+                            <h4>Professional Photographer</h4>
+                            <p>
+                                Responsive and mobile-friendly design: With the increasing use of mobile devices, it's crucial to have a website that adapts well to different screen sizes. Your design should be responsive and provide a seamless user experience across various devices
+                            </p>
+                            <div class="social-media">
+                
+                                <a href="https://web.facebook.com/dilhara.mms/" target="_blank"><i class='bx bxl-facebook'></i></a>
+                                <a href="https://www.instagram.com/dilhara_mms/" target="_blank"><i
+                                        class='bx bxl-instagram-alt'></i></a>
+                                <a href="https://www.linkedin.com/in/s-dilhara/" target="_blank"><i class='bx bxl-linkedin'></i></a>
+                
+                            </div>
+
+
+
+                        </div>
+
+                        <div class="box-area">
+                            <div class="img-area">
+                                <img src="assest/feedback_img/supun.jpeg" alt="">
+                            </div>
+                            <h3>Supun Wishwajith</h3>
+                            <h4>Professional Photographer</h4>
+                            <p class="content">
+                                Responsive and mobile-friendly design: With the increasing use of mobile devices, it's crucial to have a website that adapts well to different screen sizes. Your design should be responsive and provide a seamless user experience across various devices
+                            </p>
+                            <div class="social-media">
+                
+                                <a href="https://web.facebook.com/dilhara.mms/" target="_blank"><i class='bx bxl-facebook'></i></a>
+                                <a href="https://www.instagram.com/dilhara_mms/" target="_blank"><i
+                                        class='bx bxl-instagram-alt'></i></a>
+                                <a href="https://www.linkedin.com/in/s-dilhara/" target="_blank"><i class='bx bxl-linkedin'></i></a>
+                
+                            </div>
+
+
+
+                        </div>
+
+
+                        <div class="box-area">
+                            <div class="img-area">
+                                <img src="assest/feedback_img/manjula.jpg" alt="">
+                            </div>
+                            <h3>Dinusha Gayan Manjula</h3>
+                            <h4>Professional Photographer</h4>
+                            <p>
+                                Responsive and mobile-friendly design: With the increasing use of mobile devices, it's crucial to have a website that adapts well to different screen sizes. Your design should be responsive and provide a seamless user experience across various devices
+                            </p>
+                            <div class="social-media">
+                
+                                <a href="https://web.facebook.com/dilhara.mms/" target="_blank"><i class='bx bxl-facebook'></i></a>
+                                <a href="https://www.instagram.com/dilhara_mms/" target="_blank"><i
+                                        class='bx bxl-instagram-alt'></i></a>
+                                <a href="https://www.linkedin.com/in/s-dilhara/" target="_blank"><i class='bx bxl-linkedin'></i></a>
+                
+                            </div>
+
+
+                        </div>
+
+
+
+
+                        </div>
+
+                    </div>
+                    
+                </div>
+    
+        
+    </section>
+
+    <!-- contact goes here -->
+
+
     <section class="contact" id="contact">
         <h2 class="heading">
             Contact <span>Me!</span>
         </h2>
-        <form action="#">
+        <form action="#" id="emailForm" class="emailForm">
             <div class="input-box">
-                <input type="text" placeholder="Full Name">
-                <input type="email" placeholder="Email Address">
+                <input type="text" id="name" placeholder="Full Name">
+                <input type="email" id="senderEmail" placeholder="Email Address">
 
             </div>
 
             <div class="input-box">
-                <input type="telephone" placeholder="Mobile Number">
-                <input type="text" placeholder="Email Subject">
+                <input type="telephone" id="mobile" placeholder="Mobile Number">
+                <input type="text" id="subject" placeholder="Email Subject">
 
 
             </div>
-            <textarea name="" id="" cols="30" rows="10" placeholder="Your Massage"></textarea>
-            <input type="submit" value="Send Message" class="btn">
+            <textarea cols="30" rows="10" id="message" placeholder="Your Massage"></textarea>
+            <input type="submit" value="Send Message" id="submit" class="btn">
         </form>
     </section>
+
+    <!-- footer goes here -->
 
     <footer class="footer">
         <div class="footer-text">
@@ -229,9 +330,16 @@
         </div>
     </footer>
 
+    <!-- scripts goes here -->
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
 
     <script src="js/script.js"></script>
+    <script src="js/mail.js"></script>
+    <script src="js/carosul.js"></script>
 
 </body>
 

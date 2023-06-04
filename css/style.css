@@ -54,12 +54,13 @@ body{
 .heading{
     text-align: center;
     font-size: 4.5rem;
+    margin-bottom: 5px;
 }
 
 
 section{
     min-height: 100vh;
-    padding: 10rem 9% 2rem;
+    padding: 7rem 9% 2rem;
 }
 .home{
     display: flex;
@@ -138,6 +139,7 @@ span{
     font-size: 3.6rem;
     color: var(--text-color);
     display: none;
+    margin-right: 20px;
 }
 .home-img img{
 
@@ -362,6 +364,9 @@ span{
     color: var(--second-bg-color);
 
 }
+.contact{
+    background: var(--second-bg-color);
+}
 .contact form{
     max-width: 70rem;
     margin: 1rem auto;
@@ -384,7 +389,7 @@ span{
     padding: 1.5rem;
     font-size: 1.6rem;
     color: var(--text-color);
-    background: var(--second-bg-color);
+    background: var(--bg-color);
     border-radius: .8rem;
     margin: .7rem 0;
     width: 49%;
@@ -395,7 +400,7 @@ span{
     padding: 1.5rem;
     font-size: 1.6rem;
     color: var(--text-color);
-    background: var(--second-bg-color);
+    background: var(--bg-color);
     border-radius: .8rem;
     margin: .7rem 0;
     resize: none;
@@ -412,7 +417,7 @@ span{
     align-items: center;
     flex-wrap: wrap;
     padding: 2rem 9%;
-    background: var(--second-bg-color);
+    background: var(--bg-color);
 
 
 }
@@ -504,7 +509,114 @@ span{
     transition: .5s ease;
 }
 
-  
+.service h2{
+
+    margin-bottom: 5rem;
+
+}
+
+.service-container{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.service-container .service-box{
+
+    flex: 1 1 30rem;
+    background: var(--second-bg-color);
+    padding: 3rem 2rem 4rem;
+    border-radius: 2rem;
+    text-align: center;
+    border: .2rem solid var(--bg-color);
+    transition: .5s ease;
+}
+
+
+
+.feed-back{
+    background-color: var(--bg-color);
+    padding: 10% 0;
+}
+.owl-corousel{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
+}
+
+.owl-corousel .box-area{
+    flex: 1 1 30rem;
+    background: var(--second-bg-color);
+    padding: 4rem 5rem 4rem;
+    text-align: center;
+    position: relative;
+    display: block;
+    color: var(--text-color);
+    border: .2rem solid var(--bg-color);
+    margin: 40px 0;
+    transition: .5s ease;
+}
+
+.owl-corousel .box-area:hover{
+    border-color: var(--main-color);
+    transform: scale(1.02);
+    box-shadow: 0 0 .5rem var(--main-color);}
+
+
+.box-area h3{
+    font-size: 2.1rem;
+    color: var(--text-color);
+    margin-top: 60px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.box-area h4{
+
+    font-size: 1.77rem;
+    font-weight: 1rem;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: rgb(194, 194, 194);
+}
+
+.box-area p{
+
+    font-size: 1.6rem;
+    font-weight: 1rem;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+.box-area .img-area{
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top: -40px;
+    left: 0;
+    bottom: 0;
+    margin: 0 auto;
+    right: 0;
+    z-index: 1;
+    border: 5px solid var(--main-color);
+    border-radius: 50%;
+}
+
+.box-area .img-area img{
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
 
 
 /* Styles for small screens */
