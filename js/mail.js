@@ -1,41 +1,50 @@
-const form = document.querySelector('.emailForm');
+// Function to handle form submission
+function submitForm(event) {
+  event.preventDefault(); // Prevent the default form submission behavior
+  document.body.classList.add('loading-cursor');
+  var form = event.target;
 
+  // Perform additional form validation if needed
+  // ...
 
-function send_msg(){
+  // Send the form data using AJAX
+  var xhr = new XMLHttpRequest();
+  xhr.open(form.method, form.action, true);
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+      // Handle the server response if needed
+      // ...
 
-    var senderEmail = document.getElementById("senderEmail").value;
-    var name = document.getElementById("name").value;
-    var mobile = document.getElementById("mobile").value;
-    var subject = document.getElementById("subject").value;
-    var message = document.getElementById("message").value;
-    var mymail = "sdilhara544@gmail.com"
+      
 
-    const fs = require('fs');
-    const currentDatetimeStr = currentDatetimeStr.toISOString();
+      var res_txt = document.getElementById('response').textContent = xhr.responseText;
 
-// Open the file in append mode
-fs.appendFile('contact.txt', currentDatetimeStr + name + mobile + senderEmail +  subject + message, (err) => {
-  if (err) throw err;
-  console.log('Data appended to file.');
-});
+      if (res_txt === "Message sent successfully"){
 
-    
-  // Configure SMTPJS
-  Email.send({
-    Host : "smtp.elasticemail.com",
-    Username : "sdilhara544@gmail.com",
-    Password : "EEE4E970000A9BF8D5A00B90D4BC9C77FC3E",
-    To: mymail,
-    From: senderEmail,
-    Subject: subject,
-    Body: message
-  }).then(function(response) {
-    alert("Email sent successfully!");
-    // Clear form fields
-    document.getElementById("emailForm").reset();
-  }).catch(function(error) {
-    console.error("Error sending email:", error);
-    alert("An error occurred while sending the email. Please try again later.");
-  });
+        document.getElementById('response').classList.toggle("response_on");
 
-};
+      }else{
+
+        document.getElementById('response').classList.toggle("response_error");
+      }
+
+      document.body.classList.remove('loading-cursor');
+      
+// time out  and fade out
+      setTimeout(function () {
+
+        document.getElementById('response').style.display = 'none';
+        location.reload();
+        
+        
+      }, 4000);
+
+      form.reset();
+    }
+  };
+  xhr.send(new FormData(form));
+}
+
+// Attach the submitForm function to the form's submit event
+var form = document.getElementById('emailForm');
+form.addEventListener('submit', submitForm);

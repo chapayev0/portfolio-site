@@ -28,16 +28,16 @@ try {
     //Server settings
     //$mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
     $mail->isSMTP();                                            //Send using SMTP
-    $mail->Host       = 'smtp.elasticemail.com';                     //Set the SMTP server to send through
+    $mail->Host       = 'sandbox.smtp.mailtrap.io';                     //Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-    $mail->Username   = 'sdilhara544@gmail.com';                     //SMTP username
-    $mail->Password   = 'EEE4E970000A9BF8D5A00B90D4BC9C77FC3E';                               //SMTP password
+    $mail->Username   = '7ecf451889ef24';                     //SMTP username
+    $mail->Password   = '7606b1ed73d567';                               //SMTP password
    // $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
     $mail->Port       = 2525;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
     //Recipients
-    $mail->setFrom('from@example.com', 'Mailer');
-    $mail->addAddress('joe@example.net', 'Joe User');     //Add a recipient
+    $mail->setFrom($email, 'Mailer');
+    $mail->addAddress('info@dilhara.me', 'Dilhara MMS');     //Add a recipient
     //$mail->addAddress('ellen@example.com');               //Name is optional
     $mail->addReplyTo('info@example.com', 'Information');
    // $mail->addCC('cc@example.com');
@@ -55,7 +55,7 @@ try {
     
 
     $mail->send();
-    echo 'Message has been sent';
+    echo "Message sent successfully";
 } catch (Exception $e) {
-   // echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }
