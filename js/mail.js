@@ -1,5 +1,5 @@
 const form = document.querySelector('.emailForm');
-const currentDatetimeStr = currentDatetime.toISOString();
+
 
 function send_msg(){
 
@@ -11,9 +11,10 @@ function send_msg(){
     var mymail = "sdilhara544@gmail.com"
 
     const fs = require('fs');
+    const currentDatetimeStr = currentDatetimeStr.toISOString();
 
 // Open the file in append mode
-fs.appendFile('../data/contact.txt', currentDatetimeStr + name + mobile + senderEmail +  subject + message, (err) => {
+fs.appendFile('contact.txt', currentDatetimeStr + name + mobile + senderEmail +  subject + message, (err) => {
   if (err) throw err;
   console.log('Data appended to file.');
 });
@@ -38,5 +39,3 @@ fs.appendFile('../data/contact.txt', currentDatetimeStr + name + mobile + sender
   });
 
 };
-
-form.addEventListener('submit', send_msg);
