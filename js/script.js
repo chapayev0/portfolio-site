@@ -58,7 +58,7 @@ window.addEventListener('DOMContentLoaded', function() {
 });
 
 ScrollReveal().reveal('.home-content, .heading', { origin:'top' });
-ScrollReveal().reveal('.home-img, .service-container, .protfolio-box, .contact form, .hireme-container', { origin:'bottom' });
+ScrollReveal().reveal('.home-img, .service-container, .protfolio-box, .contact form, .hireme-container, .dream', { origin:'bottom' });
 ScrollReveal().reveal('.home-content h1, .about-img, .personal-content, .text-block ', { origin:'left' });
 ScrollReveal().reveal('.home-content p, .about-content, .service-details, .mywork-block', { origin:'right' });
     
